@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+
+server:
+  port: 8904
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8900/eureka/
+
+zuul:
+  routes:
+    account:
+      path: /acount/v1/**
+      serviceId: spring-cloud-service-account
+    order:
+      path: /order/v1/**
+      serviceId: spring-cloud-service-order
