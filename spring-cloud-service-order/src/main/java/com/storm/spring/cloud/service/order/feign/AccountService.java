@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(value = "spring-cloud-service-account",fallback = AccountServiceHystrix.class)
 public interface AccountService {
+
     @GetMapping("/user/phone/{phoneNum}")
     public User getUser(@PathVariable("phoneNum") String phoneNum);
 }

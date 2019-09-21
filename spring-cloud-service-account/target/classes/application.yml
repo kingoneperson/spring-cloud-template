@@ -1,6 +1,12 @@
 spring:
   application:
     name: spring-cloud-service-account
+  cloud:
+    config:
+      discovery:
+        service-id: spring-cloud-config
+        enabled: true
+      profile: dev
 
 server:
   port: 8902

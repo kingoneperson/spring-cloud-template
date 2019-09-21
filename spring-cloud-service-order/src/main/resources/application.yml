@@ -1,6 +1,12 @@
 spring:
   application:
     name: spring-cloud-service-order
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config
+      profile: dev
 
 server:
   port: 8901

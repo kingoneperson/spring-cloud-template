@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-cloud-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/account,classpath:/order
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8900/eureka/
